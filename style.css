@@ -1,0 +1,252 @@
+/* roots */
+:root{
+  
+  /* primary-colors */
+  --clr-primary-400: hsl(35, 77%, 62%);
+  --clr-primary-700: hsl(5, 85%, 63%);
+  
+  /* neutral-colors */
+  --clr-neutral-100: hsl(36, 100%, 99%);
+  --clr-neutral-400: hsl(233, 8%, 79%);
+  --clr-neutral-700: hsl(236, 13%, 42%);
+  --clr-neutral-800: hsl(240, 100%, 5%);
+
+  --ff-primary:'Inter', sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 700;
+  --fw-bold: 800;
+
+  --fs-300: 0.938rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-700: 2rem;
+  --fs-800: 3rem;
+  
+  --fs-body: var(--fs-300);
+  --fs-nav: var(--fs-400);
+  --fs-button: var(--fs-300);
+  --fs-primary-heading: var(--fs-400);
+  --fs-secondary-heading: var(--fs-800);
+
+
+}
+/* Remove default margin */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-body);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* styling-classes */
+body{
+  font-family: var(--ff-primary);
+  margin: 0rem 10rem 0rem 10rem;
+}
+a{
+  text-decoration: none;
+}
+a:link a:active a:visited{
+  color: var(--clr-neutral-800);
+}
+a:hover{
+  color: var(--clr-primary-700);
+}
+
+svg{
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5em;
+}
+
+.head-div{
+  width: 1440px;
+	max-width: 100%;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.heading .head-div{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: right;
+  justify-content: space-between;
+}
+
+.main-nav ul{
+  text-align: right;
+}
+
+.main-nav li{
+  display: inline;
+}
+
+.main-nav a{
+  display: inline-block;
+  padding: 1em;
+}
+.nav-list{
+  color: var(--clr-neutral-800);
+}
+.headline{
+  color: var(--clr-neutral-800);
+  font-size: var(--fs-secondary-heading);
+  font-weight: var(--fw-bold);
+  line-height: 3.5rem;
+  letter-spacing: .05em;
+}
+.news-detail{
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-primary-heading);
+  margin: 0rem 1rem 1rem 1rem;
+  text-align: justify;
+}
+.read-more-btn{
+  background-color: var(--clr-primary-700);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: .3em;
+  margin : 0.5rem 0rem 0rem 1rem;
+  cursor: pointer;
+}
+.read-more-btn:hover{
+  background-color: var(--clr-neutral-800);
+}
+.content-news{
+  background-color: var(--clr-neutral-800);
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row: span 2;
+}
+.content-news-main{
+  grid-row-start: 2;
+}
+.new{
+  font-size: var(--fs-700);
+  color: var(--clr-primary-400);
+  font-weight: var(--fw-semi-bold);
+  margin: 1rem;
+}
+.news-heading{
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-100);
+  margin: 0rem 1rem .5rem 1rem
+}
+.news-heading:hover{
+  color: var(--clr-primary-400);
+  cursor: pointer;
+}
+
+.card-num{
+  color: var(--clr-neutral-400);
+}
+.content{
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 2rem;
+}
+.grid-colspan2{
+  grid-column: span 2;
+}
+hr{
+  margin: 2rem 1rem 2rem 1rem;
+  height: 0.5px;
+  color: var(--clr-neutral-400);
+  border-style: inset;
+}
+.card-heading{
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-400);
+}
+
+.cnews-detail{
+  color: var(--clr-neutral-400);
+}
+.news-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.card-image{
+  display: grid;
+  max-width: 150px;
+  height: auto;
+}
+.c-box{
+  padding-right: 1rem;
+}
+.cbox>h3{
+  padding-bottom: 0.5em;
+}
+.cbox>p{
+  padding-bottom: 0.2em;
+}
+.card-heading:hover{
+  color: var(--clr-primary-700);
+  cursor: pointer;
+}
+.footer>h6{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10px;
+  margin: 0.5em 1rem 0em 2em;
+}
